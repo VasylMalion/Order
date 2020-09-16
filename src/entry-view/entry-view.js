@@ -3,20 +3,17 @@ import {connect} from "react-redux";
 
 import EntryViewItem from "../entry-view-item/entry-view-item";
 
-import './entry-view.css';
-
 const EntryView = ({order}) => {
 
     const orderMap = order.map( (item, idx) =>
         <div
-            className = "orderItem2"
+            className = "orderItem"
             key={item.id}
         >
             <EntryViewItem oneOrder = {item} idx = {idx} />
-            <hr />
     </div>);
 
-    return <div className = "order">
+    return <div>
         <span className = "orderHeader">Order</span>
         <br />
         <div className = "orderItem" >
@@ -28,7 +25,7 @@ const EntryView = ({order}) => {
             <span>delete</span>
             <span>change</span>
         </div>
-        <hr className = "hr" />
+        <hr />
         {orderMap}
     </div>
 }

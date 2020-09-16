@@ -1,5 +1,11 @@
-.btnCart {
+.btnCount {
+    margin: 10px;
+}
+
+.btnDelete, .btnCount, .btnHave {
     cursor: pointer;
-    margin: 0px;
-    padding: 0px;
+}
+
+.btnDelete {
+    font-size: 22px;
 }

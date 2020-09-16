@@ -5,8 +5,6 @@ import {TiDelete} from 'react-icons/ti';
 
 import {deleteItem, haveItem} from "../redux/actions";
 
-import "./entry-view-item.css";
-
 const EntryViewItem = ({oneOrder, idx, deleteItem, haveItem}) => {
 
     return <div className = "orderItem">
@@ -14,16 +12,22 @@ const EntryViewItem = ({oneOrder, idx, deleteItem, haveItem}) => {
         <span>{oneOrder.name}</span>
         <span>{oneOrder.details}</span>
         <span>{oneOrder.priority}</span>
-        <span onClick = {() => haveItem(oneOrder.id)}>
+        <span
+            className = "btnHave"
+            onClick = {() => haveItem(oneOrder.id)}
+        >
             {oneOrder.have ? "have" : "not have"}
         </span>
-        <span onClick = {() => deleteItem(oneOrder.id)}>
+        <span
+            className = "btnDelete"
+            onClick = {() => deleteItem(oneOrder.id)}
+        >
             <TiDelete/>
         </span>
-        <span className = "changes">
+        <span>
             {oneOrder.changes.map( (item, idx) =>
                 <span key = {idx}>
-                {item},
+                {item} &ensp;
             </span>)}
         </span>
     </div>

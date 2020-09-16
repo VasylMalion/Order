@@ -24,26 +24,29 @@ const ListViewItem = ({oneOrder, idx, increaseProduct,
             {oneOrder.name}
         </span>
         <span>
-            <span className = "btnCart" >
+            <span className = "btnCount" >
                 <FaMinus onClick = {() => decreaseProduct(oneOrder.id)} />
             </span>
-            <span className = "countCart" >
+            <span>
                 {oneOrder.count}
             </span>
-            <span className = "btnCart" >
+            <span className = "btnCount" >
                 <FaPlus onClick = {() => increaseProduct(oneOrder.id)} />
             </span>
         </span>
         <span>
             {oneOrder.priority}
         </span>
-        <span onClick = {() => haveItem(oneOrder.id)} >
+        <span
+            className = "btnHave"
+            onClick = {() => haveItem(oneOrder.id)}
+        >
             {oneOrder.have ? "have" : "ran out"}
         </span>
-        <span>
-            <span onClick = {() => deleteItem(oneOrder.id)}>
-                <TiDelete/>
-            </span>
+        <span
+            className = "btnDelete"
+            onClick = {() => deleteItem(oneOrder.id)}>
+            <TiDelete/>
         </span>
         <span>
             {oneOrder.changes[oneOrder.changes.length -1]}

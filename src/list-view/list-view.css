@@ -1,21 +1,13 @@
 .orderHeader {
-    display: inline;
+    display: block;
     font-size: 34px;
     font-weight: 500;
-}
-
-.order {
-    padding-left: 100px;;
+    padding: 0px 0px 10px 30px;
 }
 
 .orderItem {
-    width: 75%;
     display: grid;
+    grid-template-rows: 1fr ;
     grid-template-columns: repeat(7, 200px);
     text-align: left;
 }
-
-.orderItem span:first-child {
-    margin-left: 0px;
-}
-

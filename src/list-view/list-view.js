@@ -37,10 +37,9 @@ const ListView = ({filterOrder}) => {
             key={item.id}
         >
             <ListViewItem oneOrder = {item} idx = {idx} />
-            <hr />
     </div>);
 
-    return <div className = "order">
+    return <div>
         <span className = "orderHeader">
             Order
         </span>
@@ -54,7 +53,6 @@ const ListView = ({filterOrder}) => {
             <span>have / ran out</span>
             <span>delete</span>
             <span>last change</span>
-            <hr />
         </div>
         <hr className = "hr" />
         {orderMap}
