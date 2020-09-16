@@ -1,0 +1,21 @@
+.orderHeader {
+    display: inline;
+    font-size: 34px;
+    font-weight: 500;
+}
+
+.order {
+    padding-left: 100px;;
+}
+
+.orderItem {
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(7, 200px);
+    text-align: left;
+}
+
+.orderItem span:first-child {
+    margin-left: 0px;
+}
+
