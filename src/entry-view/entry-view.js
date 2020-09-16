@@ -6,7 +6,6 @@ import EntryViewItem from "../entry-view-item/entry-view-item";
 import './entry-view.css';
 
 const EntryView = ({order}) => {
-    console.log(order)
 
     const orderMap = order.map( (item, idx) =>
         <div
@@ -23,6 +22,7 @@ const EntryView = ({order}) => {
         <div className = "orderItem" >
             <span># </span>
             <span>name </span>
+            <span>details </span>
             <span>priority</span>
             <span>have / not have</span>
             <span>delete</span>

@@ -5,7 +5,7 @@ import {FaPlus, FaMinus} from 'react-icons/fa';
 import {TiDelete} from 'react-icons/ti';
 
 import {
-    addCountProduct,
+    increaseProduct,
     decreaseProduct,
     deleteItem,
     haveItem,
@@ -52,7 +52,7 @@ const ListViewItem = ({oneOrder, idx, increaseProduct,
 }
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-    increaseProduct: (id) => addCountProduct(id),
+    increaseProduct,
     decreaseProduct,
     deleteItem,
     haveItem

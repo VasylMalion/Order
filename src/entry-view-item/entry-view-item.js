@@ -12,6 +12,7 @@ const EntryViewItem = ({oneOrder, idx, deleteItem, haveItem}) => {
     return <div className = "orderItem">
         <span>{idx + 1}</span>
         <span>{oneOrder.name}</span>
+        <span>{oneOrder.details}</span>
         <span>{oneOrder.priority}</span>
         <span onClick = {() => haveItem(oneOrder.id)}>
             {oneOrder.have ? "have" : "not have"}
@@ -20,8 +21,8 @@ const EntryViewItem = ({oneOrder, idx, deleteItem, haveItem}) => {
             <TiDelete/>
         </span>
         <span className = "changes">
-            {oneOrder.changes.map( (item, idx) => <
-                span key = {idx}>
+            {oneOrder.changes.map( (item, idx) =>
+                <span key = {idx}>
                 {item},
             </span>)}
         </span>

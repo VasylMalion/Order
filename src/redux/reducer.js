@@ -5,6 +5,7 @@ const initialState = {
         {
             id: 1,
             name: 'apple',
+            details: "apple, apple, apple",
             priority: 2,
             have: false,
             changes: [],
@@ -13,6 +14,7 @@ const initialState = {
         {
             id: 2,
             name: 'pineapple',
+            details: "pineapple, pineapple, pineapple",
             priority: 1,
             have: true,
             changes: [],
@@ -20,6 +22,7 @@ const initialState = {
         {
             id: 3,
             name: 'banana',
+            details: "banana, banana, banana",
             priority: 3,
             have: false,
             changes: [],
@@ -28,6 +31,7 @@ const initialState = {
         {
             id: 4,
             name: 'cherry ',
+            details: "cherry, cherry, cherry",
             priority: 5,
             have: false,
             changes: [],
@@ -36,6 +40,7 @@ const initialState = {
         {
             id: 5,
             name: 'kivi',
+            details: "kivi, kivi, kivi",
             priority: 1,
             have: false,
             changes: [],
@@ -44,6 +49,7 @@ const initialState = {
         {
             id: 6,
             name: 'lemon',
+            details: "lemon, lemon, lemon",
             priority: 2,
             have: true,
             changes: [],
@@ -56,12 +62,6 @@ const initialState = {
 }
 
 const reducer = (state= initialState, action) => {
-
-    // const productId = state.products.findIndex( item => item.id === action.payload);
-    // const productItem = {...state.products[productId]};
-    //
-    // const orderId = state.order.findIndex( item => item.id === action.payload);
-    // const orderItem = {...state.order[orderId]}
 
     switch(action.type) {
         case "ADD_PRODUCT":
@@ -87,7 +87,7 @@ const reducer = (state= initialState, action) => {
                 };
             }
 
-        case "INCREASE_PRODUCT_CART":
+        case "INCREASE_ORDER_ITEM":
             const increaseOrderIndex = state.order.findIndex( item => item.id === action.payload);
             const increaseOrder = {...state.order[increaseOrderIndex]};
 
@@ -110,7 +110,7 @@ const reducer = (state= initialState, action) => {
                 ]
             };
 
-        case "DECREASE_PRODUCT_CART":
+        case "DECREASE_ORDER_ITEM":
             const decreaseOrderIndex = state.order.findIndex( item => item.id === action.payload);
             const decreaseOrder = {...state.order[decreaseOrderIndex]};
 

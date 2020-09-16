@@ -6,16 +6,15 @@
 }
 
 .orderItem2 {
-    padding-left: 20px;
+
     width: 75%;
     display: grid;
-    grid-template-columns: 200px 200px 200px 200px 200px;
+    grid-template-columns: repeat(7, 200px);
     text-align: left;
 }
 
 .orderItem span:first-child {
     margin-left: 0px;
-    font-size: 20px;
 }
 
 .hr {

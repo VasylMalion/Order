@@ -5,16 +5,16 @@ const addProduct = (id) => {
     }
 };
 
-const addCountProduct = (id) => {
+const increaseProduct = (id) => {
     return {
-        type: 'INCREASE_PRODUCT_CART',
+        type: 'INCREASE_ORDER_ITEM',
         payload: id
     }
 };
 
 const decreaseProduct = (id) => {
     return {
-        type: 'DECREASE_PRODUCT_CART',
+        type: 'DECREASE_ORDER_ITEM',
         payload: id
     }
 };
@@ -52,8 +52,8 @@ const filterRunOut = () => {
 };
 
 export {
-    addCountProduct,
     addProduct,
+    increaseProduct,
     decreaseProduct,
     deleteItem,
     haveItem,
